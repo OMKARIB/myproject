@@ -1,0 +1,27 @@
+import math
+
+def squareroot(a):
+    if a < 0:
+        raise ValueError("Cannot take square root of a negative number.")
+    return math.sqrt(a)
+def power(a, b):
+    return a ** b
+def output():
+    print("1. squareroot")
+    print("2. power")
+    choice = input("Enter choice:")
+    
+ 
+    if choice =='1':
+     a = float(input("Enter the number: "))
+     result = squareroot(a)
+     print("Result=",result)
+    if choice =='2':
+     a = float(input("Enter base: "))
+     b = float(input("Enter exponent: "))
+     result = power(a,b)
+     print("Result=",result)
+
+    else:
+        print("Invalid")
+output()

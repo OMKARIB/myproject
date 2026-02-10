@@ -1,0 +1,27 @@
+# my_package/basic_operations.py
+def add(a, b):
+    return a + b
+def sub(a, b):
+    return a - b
+def mul(a, b):
+    return a * b
+
+def output():
+    print("1. add")
+    print("2. sub")
+    print("3. mul")
+    choice = input("Enter choice: ")
+
+    a = float(input("Enter 1st number: "))
+    b = float(input("Enter 2nd number: "))
+
+    if choice == '1':
+        print("Result =", add(a, b))
+    if choice == '2':
+        print("Result =", sub(a, b))
+    if choice == '3':
+        print("Result =", mul(a, b))
+    else:
+        print("Invalid")
+        
+output()

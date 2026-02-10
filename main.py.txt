@@ -1,0 +1,56 @@
+import sys, os
+print("Running:", __file__)
+print("CWD:", os.getcwd())
+
+import sys
+sys.path.insert(0, r"C:\Users\OMKARIB\OneDrive - KPIT Technologies Ltd\1st proj")
+print("sys.path[0]:", sys.path[0])# or "/home/you/project"
+from my_packagebasic_operations import add, sub, mul
+from my_packageadv_operations import squareroot , power
+
+
+
+
+def main():
+    while True:
+        print("\nChoose operation:")
+        print("1. add")
+        print("2. sub")
+        print("3. mul")
+        print("4. div")
+        print("5. Square Root")
+        print("6. Power")
+        print("7. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == "7":
+            print("Exiting...")
+            break
+
+        # Operations that need two inputs
+        if choice in ["1", "2", "3", "4", "6"]:
+            a = float(input("Enter first number: "))
+            b = float(input("Enter second number: "))
+
+            if choice == "1":
+                print("Result:", add(a, b))
+            elif choice == "2":
+                print("Result:", sub(a, b))
+            elif choice == "3":
+                print("Result:", mul(a, b))
+            elif choice == "4":
+                print("Result:", div(a, b))
+            elif choice == "6":
+                print("Result:", power(a, b))
+
+        # Square root requires only one input
+        elif choice == "5":
+            a = float(input("Enter number: "))
+            print("Result:", squareroot(a))
+
+        else:
+            print("Invalid choice!")
+
+if __name__ == "__main__":
+    main()
